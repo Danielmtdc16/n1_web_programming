@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    font-family: "Oswald", sans-serif;
+
+}
+
+body {
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.main-site {
+    width: 1500px;
+}
+
+.main-body {
+    color: aqua;
+    padding: 15px !important;
+    background-color: rgb(67, 67, 214);
+    border-radius: 10px;
+}
+
+#number-members-input {
+    box-shadow: -4px 5px 5px 0px #022a80;
+}
+
+#calculate-button {
+    width: 100%;
+    box-shadow: -4px 5px 5px 0px #022a80;
+
+    & i {
+        text-align: center;
+    }
+}
+
+.groups {
+    margin: 15px 0;
+
+    & .row {
+        display: flex;
+        gap: 10px;
+
+        & .group-card {
+            color: black;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: -4px 5px 5px 0px #022a80;
+            opacity: 0;
+
+            & p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.groups .group-card.show {
+    animation: appearSmoothly 1s ease forwards;
+}
+
+@keyframes appearSmoothly {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
